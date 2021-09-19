@@ -19,7 +19,8 @@ Next we need the logic to spawn the ball in world. The blueprint is basically an
 Here is the logic for player paddle. We just multiply the axis value (*which is 1*) with a variable speed and pass this to makevector node which moves the paddle on x axis. At the final we add the result to the impulse node which uses the paddle as target.
 ![5](https://user-images.githubusercontent.com/90534698/133913907-603e127a-939e-462f-9800-d05e45160725.png)
 
-The lefttrigger and righttrigger blueprints are trigger boxes which are used in another blueprint.
+The lefttrigger and righttrigger blueprints are trigger boxes which are used in Pball blueprint.
 
+Here is the scorring system. I used Event actorbeginoverlap node and cast it to lefttrigger and rightrigger, in that way all logic is scripted in pball blueprint where I can freely acces the ping pong ball and trigger boxes.
 ![1](https://user-images.githubusercontent.com/90534698/133913386-746ab805-06e6-4d9f-837e-a7cb66b748cc.png)
 ![2](https://user-images.githubusercontent.com/90534698/133913387-b8236632-de2b-40fc-bf35-d398ac8666a9.png)
